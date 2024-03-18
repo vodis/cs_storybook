@@ -1,0 +1,17 @@
+<div
+    class="popover"
+    #popoverRef
+    (click)="handleClick()"
+    (lsOnClickOutside)="handleClickOutside()"
+    listenToOutsideClick
+>
+    <ng-content select="[popover-button]"></ng-content>
+    <div
+        class="popover__body _is-visible"
+        [class._is-visible]="isVisiblePopup"
+        [ngStyle]="popupPosition"
+        [style.min-width]="minWidth + 'px'"
+    >
+        <ng-content select="[popover-body]"></ng-content>
+    </div>
+</div>

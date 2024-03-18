@@ -1,0 +1,14 @@
+:host {
+  .network-switch {
+    &__body {
+      padding: 0.25rem;
+    }
+
+    &__chain-list {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0;
+    }
+  }
+}

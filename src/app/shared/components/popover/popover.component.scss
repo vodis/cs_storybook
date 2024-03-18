@@ -1,0 +1,29 @@
+@import '@vodis/ui-kit/styles/breakpoints';
+
+:host {
+  .popover {
+    position: relative;
+    display: inline-block;
+
+    &__body {
+      display: none;
+      position: absolute;
+      background: white;
+      border: 1px solid #ffffff1f;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px 0 #00000026;
+      z-index: 3;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-top: 1rem;
+
+      &._is-visible {
+        display: block;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 100vw;
+      }
+    }
+  }
+}

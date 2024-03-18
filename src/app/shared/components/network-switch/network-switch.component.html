@@ -1,0 +1,20 @@
+<div class="network-switch">
+    <app-popover (isOpen)="handleOpen($event)">
+        <div popover-button>
+            <button mat-button>
+                <mat-icon>{{
+                    isNetworkSwitchOpen ? 'keyboard_arrow_up' : 'keyboard_arrow_down'
+                    }}</mat-icon>
+                <img [src]="selectedChain.icon" alt="ethereum logo" />
+            </button>
+        </div>
+        <div popover-body class="network-switch__body">
+            @for (chain of chains; track chain) {
+                <div class="network-switch__chain-list">
+                    <img [src]="chain.icon" [alt]="chain.chainName" />
+                    <span>{{chain.chainName}}</span>
+                </div>
+            }
+        </div>
+    </app-popover>
+</div>
